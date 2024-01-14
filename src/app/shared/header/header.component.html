@@ -1,0 +1,57 @@
+<!-- header.component -->
+
+<header class="px-5">
+  <div class="container-fluid p-4 d-flex justify-content-between align-items-center flex-wrap gap-2">
+    <div>
+      <img src="assets/networks.jpg" alt="Star Wars">
+    </div>
+    <div class="logo">
+      <a routerLink="">
+        <img src="assets/logo.png" alt="" height="80">
+      </a>
+    </div>
+    <div class="account">
+      @if(!user){
+      <button class="btn btn-link nav-item nav-link" routerLink="../login">LOG IN</button>
+      }
+      @if(user){
+      <button class="btn btn-link nav-item nav-link" (click)="logout()">LOG OUT</button>
+      }
+
+    </div>
+  </div>
+</header>
+
+<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-white border-top border-bottom p-0">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item border-end border-start">
+          <a class="nav-link" routerLink="" routerLinkActive="active border-bottom border-2 border-primary"
+            [routerLinkActiveOptions]="{exact: true}">HOME</a>
+        </li>
+        <li class="nav-item border-end">
+          <a class="nav-link" routerLink="../starships"
+            routerLinkActive="active border-bottom border-2 border-primary">STARSHIPS</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav> -->
+
+
+
+<!-- <nav class="navbar navbar-expand navbar-dark bg-dark border-white border-top border-bottom p-0">
+  <div class="container">
+    <div class="navbar-nav mx-auto">
+      <a class="nav-item nav-link border-end border-start" routerLink="">HOME</a>
+
+      <button class="nav-item nav-link border-end" routerLink="../starships">STARSHIPS</button>
+
+    </div>
+  </div>
+</nav> -->

@@ -1,0 +1,90 @@
+<!-- register.component.html -->
+
+<div class="bg-account">
+  <div class="container">
+    <header class="text-center pt-3">
+      <div class="pt-5 pb-3"><img class="bg-account-logo" src="assets/thr-logos-800_cf05c8d8.png" alt=""></div>
+      <h2 class="pb-3">Lorem ipsum dolor sit amet.</h2>
+      <button class="btn btn-primary btn-lg rounded-pill" style="--bs-btn-padding-x: 2rem">EXPLORE</button>
+    </header>
+
+    <div class="col-md-6 offset-md-3 mt-5 pb-5">
+      <div class="card mb-3">
+        <h4 class="card-header">Register</h4>
+        <div class="card-body">
+          <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <div class="mb-3">
+              <label class="form-label">First Name</label>
+              <input type="text" formControlName="firstName" class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+              @if(submitted && f.firstName.errors){
+              <div class="invalid-feedback">
+                @if(f.firstName.errors.required){
+                <div>First Name is required</div>
+                }
+              </div>
+              }
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Last Name</label>
+              <input type="text" formControlName="lastName" class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
+              @if(submitted && f.lastName.errors){
+              <div class="invalid-feedback">
+                @if(f.lastName.errors.required){
+                <div>Last Name is required</div>
+                }
+              </div>
+              }
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Username</label>
+              <input type="text" formControlName="username" class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+              @if(submitted && f.username.errors){
+              <div class="invalid-feedback">
+                @if(f.username.errors.required){
+                <div>Username is required</div>
+                }
+              </div>
+              }
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Password</label>
+              <input type="password" formControlName="password" class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+              @if(submitted && f.password.errors){
+              <div class="invalid-feedback">
+                @if(f.password.errors.required){
+                <div>Password is required</div>
+                }
+
+                @if(f.password.errors.minlength){
+                <div>Password must be at least 6 characters</div>
+                }
+              </div>
+              }
+            </div>
+
+            <div class="d-flex gap-3">
+              <button [disabled]="loading" class="btn btn-primary btn-lg rounded-pill" style="--bs-btn-padding-x: 2rem">
+                @if(loading){
+                <span class="spinner-border spinner-border-sm me-1"></span>
+                }
+                Register
+              </button>
+              <a routerLink="" class="btn btn-outline-secondary btn-lg rounded-pill"
+                style="--bs-btn-padding-x: 2rem">Cancel</a>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <alert class="mb-5" />
+    </div>
+  </div>
+
+</div>

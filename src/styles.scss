@@ -1,0 +1,34 @@
+$primary: #FFEA00;
+$dark: #000000;
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+.bg-account {
+  background-image: url('assets/fondo.jpg');
+  background-size: cover;
+  background-position: top center;
+}
+
+.bg-account-logo {
+  max-width: 400px;
+}
+
+.smallcard {
+  max-height: 160px;
+}
+
+.pic-list {
+  max-height: 120px;
+  overflow: hidden;
+}
+
+.bg-home {
+  background-image: url('assets/tentpolehero-desktop-thr-phase-iii_6b7f1309.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 60vh;
+}
+
+.bg-home img {
+  max-width: 400px;
+}

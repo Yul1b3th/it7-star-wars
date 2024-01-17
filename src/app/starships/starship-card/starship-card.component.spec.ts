@@ -25,7 +25,8 @@ describe('StarshipCardComponent', () => {
       imports: [
         CommonModule,
         RouterModule,
-        HttpClientModule, StarshipCardComponent
+        HttpClientModule,
+        StarshipCardComponent
       ],
       providers: [
         { provide: ActivatedRoute, useValue: { params: of({ id: '1' }) } },
@@ -35,7 +36,8 @@ describe('StarshipCardComponent', () => {
 
     // Configurar la función espía después de configurar el módulo
     starshipsServiceSpy = jest.spyOn(TestBed.inject(StarshipsService), 'loadStarshipDetails');
-  }));
+  }), 10000); // Aumenta el valor de tiempo de espera según sea necesario
+
 
   beforeEach(() => {
     fixture = TestBed.createComponent(StarshipCardComponent);

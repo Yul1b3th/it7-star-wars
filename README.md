@@ -19,7 +19,7 @@ Puedes ver la demostración de la aplicación en [Star Wars App](https://yul1b3t
 
 Este proyecto utiliza la [API de Star Wars](https://swapi.dev/documentation) para obtener información sobre naves espaciales. Puedes explorar la documentación para conocer los endpoints disponibles y la estructura de los datos.
 
-Además, las imágenes de las naves espaciales se obtienen de [Star Wars Visual Guide](https://starwars-visualguide.com/assets/img/starships/). Puedes acceder a las imágenes utilizando enlaces como este: [Imagen de la Nave 5](https://starwars-visualguide.com/assets/img/starships/5.jpg).
+Además, las imágenes de las naves espaciales se obtienen de [Star Wars Visual Guide](https://starwars-visualguide.com/#/starships?page=1). Puedes acceder a las imágenes utilizando enlaces como este: [Imagen de la Nave 5](https://starwars-visualguide.com/assets/img/starships/5.jpg).
 
 
 
@@ -61,10 +61,6 @@ cd star-wars
 npm install
 ```
 
-5. Instala Bootstrap para los estilos adicionales:
-```bash
-npm i bootstrap@5.3.2
-```
 
 ## Ejecución ▶️
 Ejecuta la aplicación con el siguiente comando:

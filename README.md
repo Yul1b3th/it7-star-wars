@@ -48,12 +48,12 @@ json-server --watch db.json --port 3000
 
 2. Clona el repositorio:
 ```bash
-git clone https://github.com/Yul1b3th/star-wars
+git clone https://github.com/Yul1b3th/it6-budget.git
 ```
 
 3. Ingresa al directorio del proyecto:
 ```bash
-cd star-wars
+cd it7-star-wars
 ```
 
 4. Instala las dependencias:

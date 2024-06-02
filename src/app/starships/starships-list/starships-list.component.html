@@ -3,52 +3,54 @@
 <div class="container starships-list">
   <div class="py-3 d-flex justify-content-end gap-2">
     @if(starshipsService.starshipsList().length > 0){
-
     @if(starshipsService.previousPage()){
-    <button (click)="loadPreviousPage()" class="btn btn-outline-primary">Previous</button>
-    }
-
-    @for (page of getPages(); track $index) {
-    <button (click)="loadPage(page)" [class.active]="currentPageNumber === page" class="btn btn-outline-primary">
+    <button (click)="loadPreviousPage()" class="btn btn-outline-primary">
+      Previous
+    </button>
+    } @for (page of getPages(); track $index) {
+    <button
+      (click)="loadPage(page)"
+      [class.active]="currentPageNumber === page"
+      class="btn btn-outline-primary"
+    >
       {{ page }}
     </button>
-    }
-
-    @if(starshipsService.nextPage()){
-    <button (click)="loadNextPage()" class="btn btn-outline-primary">Next</button>
-    }
-
-    }
+    } @if(starshipsService.nextPage()){
+    <button (click)="loadNextPage()" class="btn btn-outline-primary">
+      Next
+    </button>
+    } }
   </div>
 
   <div class="d-flex flex-wrap justify-content-center gap-3">
     @for (starship of starshipsService.starshipsList(); track starship.id){
     <div class="card">
-      <div class=" pic-list">
-        <img [src]="starship.pic" alt="{{ starship.name }}" (error)="handleImageError($event)" class="card-img-top"
-          alt="starship.name">
+      <div class="pic-list">
+        <img
+          [src]="starship.pic"
+          alt="{{ starship.name }}"
+          (error)="handleImageError($event)"
+          class="card-img-top"
+          alt="starship.name"
+        />
       </div>
       <div class="card-body">
         <h2 class="fs-5 card-title">{{ starship.name }}</h2>
-        <p class="card-text">{{ starship.model }}
-        </p>
+        <p class="card-text">{{ starship.model }}</p>
       </div>
       <div class="card-footer text-body-secondary bg-white border-0">
-        <a href="#" class="card-link btn btn-primary" [routerLink]="['/starship', starship.id]"
-          (click)="loadStarshipDetails(starship.id)">More info</a>
+        <a
+          class="card-link btn btn-primary"
+          [routerLink]="['/starship', starship.id]"
+          (click)="loadStarshipDetails(starship.id)"
+          >More info</a
+        >
       </div>
     </div>
     }@empty {
     <h3 class="text-center">Loading...</h3>
     }
   </div>
-
-
-
-
-
-
-
 
   <!--   <ul>
     @for (starship of starshipsService.starshipsList(); track starship.id){
@@ -64,10 +66,4 @@
     <h3 class="text-center">Loading...</h3>
     }
   </ul> -->
-
-
-
-
-
-
 </div>

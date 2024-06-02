@@ -50,7 +50,8 @@
                   "maximumError": "4kb"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "baseHref": "/it7-star-wars/"
             },
             "development": {
               "optimization": false,

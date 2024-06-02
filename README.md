@@ -6,7 +6,7 @@ Este repositorio contiene los recursos de una aplicación web para explorar info
 
 ## Demo 🚀
 
-Puedes ver la demostración de la aplicación en [Star Wars App](https://yul1b3th.github.io/it-star-wars/).
+Puedes ver la demostración de la aplicación en [Star Wars App](https://yul1b3th.github.io/it7-star-wars/).
 
 ## Características ✨
 
